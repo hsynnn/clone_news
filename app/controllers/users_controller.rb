@@ -8,7 +8,7 @@ around_filter :catch_not_found
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to user_path(@user)
+			redirect_to new_session_path
 		else
 			render :new
 		end
