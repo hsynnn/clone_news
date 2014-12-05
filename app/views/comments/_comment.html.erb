@@ -1,0 +1,8 @@
+<% if comment.body != nil %>
+	<div class="comment"><hr>
+		<p><%= comment.body %></p>
+		<small class="details">
+			submitted by <%= link_to comment.user.username, comment.user %>
+			<%= time_ago_in_words comment.created_at %> ago
+<% end %>
+</small></hr>

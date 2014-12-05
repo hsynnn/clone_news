@@ -1,0 +1,28 @@
+<div class="contain-to-grid">
+  		<nav class="top-bar">
+  			<ul class="title-area">
+  				<li class="name">
+  					<h1><a href="/"><strong>Entrepreneur News</strong></h1>
+  				</li>
+        </ul>
+        <section class="top-bar-section">
+  		<ul class="left">
+  			<li><%= link_to "Put a link", new_link_path %></li>
+  		</ul>
+  		</section>
+  		<section class="top-bar-section">
+        <ul class="right">
+        <% if signed_in? %>
+            <li><%= link_to "Edit My Profile", edit_user_path(current_user) %>  
+  			<li><%= link_to current_user.username, user_path(current_user) %></li>
+  			<li><%= link_to "Logout", logout_path, method: :delete %>
+  				
+  			<% else %>
+  			<li><%= link_to "Sign Up", new_user_path %></li>
+  			<li><%= link_to "Login", login_path %></li>
+  			<% end %>
+  		</ul>
+  		</section>
+ 
+  </nav>
+  	</div>

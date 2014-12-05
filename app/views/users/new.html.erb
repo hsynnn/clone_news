@@ -1,0 +1,33 @@
+<%= render partial: "shared/user_error" %>
+<li class="divider"></li>
+<%= form_for @user do |f| %>
+<div class="row">
+<div class="large-6 columns">
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+</div>
+<div class="large-6 columns">
+<%= f.label :last_name %>
+<%= f.text_field :last_name%>
+</div>
+<div class="large-12 columns">
+<%= f.label :username %>
+<%= f.text_field :username %>
+</div>
+<div class="large-12 columns">
+<%= f.label :email %>
+<%= f.email_field :email %>
+</div>
+<div class="large-12 columns">
+<%= f.label :password %>
+<%= f.password_field :password %>
+</div>
+<div class="large-12 columns">
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
+</div>
+<div class="large-12 columns">
+<%= f.submit "Sign Up", class: 'medium button right' %>
+</div>
+</div>
+<% end %>

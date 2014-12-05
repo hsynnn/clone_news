@@ -1,0 +1,12 @@
+<li class="divider"></li>
+<h4 class="text-center"><%= link_to @link.title, @link.url %></h4><hr>
+<%= form_for [@link, @comment] do |f| %>
+<div class="row">
+<div class="large-12 columns">
+<label>Add Comment</label>
+<%= f.text_area :body %>
+<%= f.submit "Add Comment", class: 'small button right' %>
+</div>
+<% end %>
+
+<%= render @link.comments %>

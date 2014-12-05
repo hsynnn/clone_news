@@ -1,0 +1,9 @@
+<li class="divider"></li>
+<li class="divider"></li>
+<div class="large-4 columns large-centered panel radius">
+	<%= form_for :sessions, url: session_path do |form| %>
+	<%= form.text_field :user_name, placeholder: 'Username' %><br>
+	<%= form.password_field :password, placeholder: 'Password' %>
+	<%= form.submit 'Login', class: 'button expand large-12 columns' %>
+	<% end %>
+</div>
