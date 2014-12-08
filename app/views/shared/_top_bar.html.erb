@@ -7,13 +7,13 @@
         </ul>
         <section class="top-bar-section">
   		<ul class="left">
-  			<li><%= link_to "Put a link", new_link_path %></li>
+  			<li><%= link_to "Share a link", new_link_path %></li>
   		</ul>
   		</section>
   		<section class="top-bar-section">
         <ul class="right">
         <% if signed_in? %>
-            <li><%= link_to "Edit My Profile", edit_user_path(current_user) %>  
+            <li><%= link_to "Edit Profile", edit_user_path(current_user) %>  
   			<li><%= link_to current_user.username, user_path(current_user) %></li>
   			<li><%= link_to "Logout", logout_path, method: :delete %>
   				
