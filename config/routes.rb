@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/about', to: 'static_pages#about'
+
   root 'links#index'
  
   resources :links do
