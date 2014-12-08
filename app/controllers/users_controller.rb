@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 before_action :select_user, only: [:show, :edit, :update, :destroy]
 before_action :validate_permission!, only: [:edit, :update, :destroy]
-around_filter :catch_not_found
+around_filter :catch_not_found, only: [:destroy]
 	def new
 		@user = User.new
 	end
@@ -29,6 +29,7 @@ around_filter :catch_not_found
 		end
 	end
 	def destroy
+		session[:user_id] = nil
 		@user.destroy
 		redirect_to root_url
 		end
