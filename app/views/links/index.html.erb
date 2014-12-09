@@ -1,4 +1,4 @@
-<li class="divider"></li>
+<p>
 <% @links.each do |link| %>
 <div class="text-center">
 <div class="row">
@@ -11,9 +11,10 @@
 </div>
 </div>
 </div>
+</p>
 <hr/>
 <% end %>
-<div class="text-center"><li class="divider"></li>
-<%= will_paginate @links, :page_links => false %>
+<div class="text-center">
+<p><%= will_paginate @links, :page_links => false %></p>
 </div>
-<li class="divider"></li>
+
