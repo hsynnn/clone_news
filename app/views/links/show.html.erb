@@ -1,13 +1,6 @@
-<%= @link.title %>
+<p>
+<%= @link.title %><br>
 <%= @link.url %>
-<%= form_for :comments, url: comment_path do |f| %>
+</p>
   
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 

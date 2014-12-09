@@ -1,4 +1,4 @@
-<li class="divider"></li>
+<p>
 <%= form_for @user do |f| %>
 <div class="row">
 <div class="large-12 columns">
@@ -34,5 +34,6 @@
 </div>
 </div>
 <% end %>
+</p>
 
 <div class="row"><%= link_to "Delete My Account", @user, method: :delete, data: {confirm: "Are you sure?"}, class: 'small button alert' %></div>

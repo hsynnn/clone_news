@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'links#index'
  
-  resources :links do
+  resources :links, only: [:index, :new, :create, :destroy] do
   	member do
       get :upvote
   end
