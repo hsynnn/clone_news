@@ -9,7 +9,7 @@ class LinksController < ApplicationController
 		if :validate_user!
 		@link = Link.new
 	else
-		flash.now[:error] = "You need to login!"
+		flash[:error] = "Please login to share a link."
 	end
 	end
 	def create
