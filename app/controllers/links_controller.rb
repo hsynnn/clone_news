@@ -2,8 +2,6 @@ class LinksController < ApplicationController
 	before_action :validate_user!, only: [:new, :create]
 	def index
 		@links = Link.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
-		rescue ActiveRecord::RecordNotFound
-    redirect_to(root_url, :notice => 'Record not found')
 		end
 	def new
 		if :validate_user!

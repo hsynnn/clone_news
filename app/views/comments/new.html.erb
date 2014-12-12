@@ -1,4 +1,4 @@
-<li class="divider"></li>
+<p>
 <h4 class="text-center"><%= link_to @link.title, @link.url %></h4><hr>
 <%= form_for [@link, @comment] do |f| %>
 <div class="row">
@@ -8,5 +8,6 @@
 <%= f.submit "Add Comment", class: 'small button right' %>
 </div>
 <% end %>
+</p>
 
 <%= render @link.comments %>

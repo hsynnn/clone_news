@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 before_action :select_user, only: [:show, :edit, :update, :destroy]
 before_action :validate_permission!, only: [:edit, :update, :destroy]
-around_filter :catch_not_found, only: [:destroy]
+	
 	def new
 		@user = User.new
 	end
@@ -47,11 +47,6 @@ around_filter :catch_not_found, only: [:destroy]
 	    unless current_user == @user
 		redirect_to root_url, alert: 'Nope!'
 	end
-end
-def catch_not_found
-yield
-rescue ActiveRecord::RecordNotFound
-  redirect_to root_url, :flash => { :error => "Record not found." }
 end
 
 end
